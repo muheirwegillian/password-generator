@@ -14,3 +14,17 @@ sliderValue.textContent =inputSlider.value;
 inputSlider.addEventListener('input',()=>{
     sliderValue.textContent = inputSlider.value;
 })
+
+genBtn.addEventListener('click',()=>{
+    passBox.value = generatePassword()
+})
+
+// function to generate password
+function generatePassword(){
+
+    let genPassword = "";
+
+    genPassword = Math.random();
+    return genPassword
+}
+
