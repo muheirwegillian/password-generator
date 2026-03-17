@@ -27,8 +27,14 @@ let allSymbols =  "@!#$%^&*"
 function generatePassword(){
 
     let genPassword = "";
+    let allChars = "";
 
-    genPassword =upperchars.charAt(Math.floor(Math.random() * upperchars.length));
+        allChars += lowercase.checked ? lowerchars : "";
+        allChars += uppercase.checked ? upperchars : "";
+        allChars += number.checked ? allNumbers : "";
+        allChars += Symbols.checked ? allSymbols : "";
+
+  //genPassword =upperchars.charAt(Math.floor(Math.random() * upperchars.length));
     return genPassword
 }
 
