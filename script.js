@@ -50,6 +50,5 @@ function generatePassword() {
     }
 
     return genPassword;
-
 }
 
