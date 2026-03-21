@@ -5,7 +5,7 @@ let uppercase = document.getElementById("uppercase");
 let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbols");
 let genBtn = document.getElementById("genBtn");
-
+let copyIcon = document.getElementById("copyIcon");
 
 
 
@@ -52,3 +52,12 @@ function generatePassword() {
     return genPassword;
 }
 
+copyIcon.addEventListener('click', () => {
+
+    if(passBox.value != "" || passBox.value.length >=1){
+    navigator.clipboard.writeT(passBox.value);
+    copyIcon.innerText = "check";
+    copyIcon.title = "password Copied";
+}
+
+})
